@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "UCR Dark Theme",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://registrationssb.ucr.edu/*",
+                "http://registrationssb.ucr.edu/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": ""
+    }
+}
