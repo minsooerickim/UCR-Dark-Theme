@@ -2,11 +2,8 @@
     "manifest_version": 2,
     "name": "UCR Dark Theme",
     "version": "0.0.1",
-    "background": {
-        "scripts": ["background.js"]
-    },
     "permissions": [
-        "tabs", "<all_urls>"
+        "tabs", "*://*.ucr.edu/*"
     ],
     "browser_action": {
         "default_popup": "popup.html"
