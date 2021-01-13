@@ -5,15 +5,11 @@
     "content_scripts": [
         {
             "matches": [
-                "https://registrationssb.ucr.edu/*",
-                "http://registrationssb.ucr.edu/*"
+                "*://*.ucr.edu/*"
             ],
             "js": [
                 "content.js"
             ]
         }
-    ],
-    "browser_action": {
-        "default_icon": ""
-    }
+    ]
 }
