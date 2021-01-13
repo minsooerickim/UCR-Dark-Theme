@@ -12,6 +12,7 @@ $(function(){
 
 console.log("test");
 
+//FIX UP preferable dark mode theme
 function hello() {
   chrome.tabs.executeScript({
     code: `if (document.querySelector('html').style.filter == 'invert(100%)') {
