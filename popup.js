@@ -1,26 +1,22 @@
-/*
-console.log("dark.js test");
-
-$(function(){
-    $("#button").click(function(){
-        chrome.tabs.executeScript({
-            file: "content.js"
-        });
-    });
-});
-*/
-
-console.log("test");
-
+//toggle for dark theme
 //FIX UP preferable dark mode theme
 function hello() {
   chrome.tabs.executeScript({
-    code: `if (document.querySelector('html').style.filter == 'invert(100%)') {
-      document.querySelector('html').style.filter = "";
-    }
-    else {
-      document.querySelector('html').style.filter = 'invert(100%)';
-    }`
+    code: `
+    $(function(){ 
+
+      if ($("html").css('filter') == 'invert(1) hue-rotate(180deg)') {
+        $("html").css('filter', '');
+        $("img").css('filter', '');
+        $(".footer_links").css('filter', '');
+      }
+      else {
+          $("html").css('filter', 'invert(1) hue-rotate(180deg)');
+          $("img").css('filter', 'invert(1) hue-rotate(180deg)');
+          $(".footer_links").css('filter', 'invert(1) hue-rotate(180deg)');
+      }
+
+    })`
   }); 
 }
 
